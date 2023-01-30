@@ -5,6 +5,7 @@ import (
 
 	"github.com/tavvfiq/game-server-websocket/internal/pkg/model"
 	"github.com/tavvfiq/game-server-websocket/internal/pkg/store"
+	"github.com/tavvfiq/game-server-websocket/internal/pkg/utils"
 )
 
 func StateUpdateEventHandler(ctx context.Context, serverID string, player model.Player) error {
@@ -17,5 +18,6 @@ func StateUpdateEventHandler(ctx context.Context, serverID string, player model.
 	}
 	currentState.State = newState
 	store.UpdatePlayer(currentState)
-	return broadcastMessage(STATE_UPDATE, serverID, player.ID, currentState)
+	Ids := utils.FilterOutString(store.GetConnIDs(), player.ID)
+	return broadcastMessage(STATE_UPDATE, serverID, Ids, currentState)
 }

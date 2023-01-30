@@ -36,3 +36,11 @@ func RemoveConnection(thisConn *model.WebSocketConnection) error {
 	conns.mtx.Unlock()
 	return nil
 }
+
+func GetConnIDs() []string {
+	IDs := []string{}
+	for _, conn := range conns.connections {
+		IDs = append(IDs, conn.PlayerID)
+	}
+	return IDs
+}
