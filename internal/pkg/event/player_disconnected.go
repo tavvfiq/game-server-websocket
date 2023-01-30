@@ -3,7 +3,8 @@ package event
 import (
 	"context"
 	"fmt"
-	"game-server-websocket/internal/pkg/store"
+
+	"github.com/tavvfiq/game-server-websocket/internal/pkg/store"
 )
 
 func PlayerDisconnectedEventHandler(ctx context.Context, serverID string, playerID string) error {

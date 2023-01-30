@@ -1,8 +1,9 @@
 package store
 
 import (
-	"game-server-websocket/internal/pkg/model"
 	"sync"
+
+	"github.com/tavvfiq/game-server-websocket/internal/pkg/model"
 )
 
 type _connections struct {

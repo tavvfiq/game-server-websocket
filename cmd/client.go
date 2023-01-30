@@ -6,7 +6,8 @@ package cmd
 
 import (
 	"context"
-	"game-server-websocket/internal/app"
+
+	"github.com/tavvfiq/game-server-websocket/internal/app"
 
 	"github.com/spf13/cobra"
 )

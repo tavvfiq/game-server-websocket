@@ -5,9 +5,6 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
-	"game-server-websocket/internal/pkg/event"
-	"game-server-websocket/internal/pkg/model"
-	"game-server-websocket/internal/pkg/store"
 	"log"
 	"net/url"
 	"os"
@@ -15,6 +12,10 @@ import (
 	"strconv"
 	"strings"
 	"time"
+
+	"github.com/tavvfiq/game-server-websocket/internal/pkg/event"
+	"github.com/tavvfiq/game-server-websocket/internal/pkg/model"
+	"github.com/tavvfiq/game-server-websocket/internal/pkg/store"
 
 	"github.com/gorilla/websocket"
 )

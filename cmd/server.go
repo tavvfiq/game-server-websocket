@@ -6,11 +6,12 @@ package cmd
 
 import (
 	"fmt"
-	"game-server-websocket/internal/app"
-	"game-server-websocket/internal/pkg/model"
-	"game-server-websocket/internal/pkg/store"
 	"log"
 	"net/http"
+
+	"github.com/tavvfiq/game-server-websocket/internal/app"
+	"github.com/tavvfiq/game-server-websocket/internal/pkg/model"
+	"github.com/tavvfiq/game-server-websocket/internal/pkg/store"
 
 	"github.com/gorilla/websocket"
 	"github.com/spf13/cobra"

@@ -3,8 +3,9 @@ package event
 import (
 	"context"
 	"fmt"
-	"game-server-websocket/internal/pkg/model"
-	"game-server-websocket/internal/pkg/store"
+
+	"github.com/tavvfiq/game-server-websocket/internal/pkg/model"
+	"github.com/tavvfiq/game-server-websocket/internal/pkg/store"
 )
 
 func NewPlayerEventHandler(ctx context.Context, serverID string, player model.Player) error {

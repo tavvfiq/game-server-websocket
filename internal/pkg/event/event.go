@@ -2,8 +2,9 @@ package event
 
 import (
 	"encoding/json"
-	"game-server-websocket/internal/pkg/model"
-	"game-server-websocket/internal/pkg/store"
+
+	"github.com/tavvfiq/game-server-websocket/internal/pkg/model"
+	"github.com/tavvfiq/game-server-websocket/internal/pkg/store"
 )
 
 func broadcastMessage(eventType, serverID, playerID string, payload interface{}) error {

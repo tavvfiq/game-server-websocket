@@ -1,4 +1,4 @@
-module game-server-websocket
+module github.com/tavvfiq/game-server-websocket
 
 go 1.18
 

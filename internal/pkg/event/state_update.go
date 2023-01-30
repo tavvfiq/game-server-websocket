@@ -2,8 +2,9 @@ package event
 
 import (
 	"context"
-	"game-server-websocket/internal/pkg/model"
-	"game-server-websocket/internal/pkg/store"
+
+	"github.com/tavvfiq/game-server-websocket/internal/pkg/model"
+	"github.com/tavvfiq/game-server-websocket/internal/pkg/store"
 )
 
 func StateUpdateEventHandler(ctx context.Context, serverID string, player model.Player) error {

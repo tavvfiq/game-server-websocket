@@ -4,11 +4,12 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
-	"game-server-websocket/internal/pkg/event"
-	"game-server-websocket/internal/pkg/model"
-	"game-server-websocket/internal/pkg/store"
 	"log"
 	"strings"
+
+	"github.com/tavvfiq/game-server-websocket/internal/pkg/event"
+	"github.com/tavvfiq/game-server-websocket/internal/pkg/model"
+	"github.com/tavvfiq/game-server-websocket/internal/pkg/store"
 )
 
 func HandleIO(ctx context.Context, currentConn *model.WebSocketConnection) {
