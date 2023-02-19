@@ -12,6 +12,6 @@ func NewPlayerEventHandler(ctx context.Context, serverID string, player model.Pl
 	store.AddPlayer(player)
 	IDs := utils.FilterOutString(store.GetConnIDs(), player.ID)
 	go broadcastMessage(NEW_CONNECTION, serverID, IDs, player)
-	go broadcastMessage(STATE_UPDATE, serverID, []string{player.ID}, store.GetPlayers())
+	go broadcastMessage(SYNC_STATE, serverID, []string{player.ID}, store.GetPlayers())
 	return nil
 }
